@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+
+import Topo from "./componentes/Topo";
+import SecaoBanner from "./componentes/SecaoBanner";
+import SecaoExperienciaTrabalho from "./componentes/SecaoExperienciaTrabalho";
+import Rodape from "./componentes/Rodape"
 
 function App() {
+
+  const [modoEscuro, setModoEscuro] = useState(false);
+
+  const alterarModo = () => {
+    setModoEscuro(!modoEscuro)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Topo alterarModo={alterarModo} modoEscuro={modoEscuro}/>
+      <SecaoBanner modoEscuro={modoEscuro}/>
+      <SecaoExperienciaTrabalho modoEscuro={modoEscuro}/>
+      <Rodape modoEscuro={modoEscuro}/>
+    </main>
   );
 }
 
