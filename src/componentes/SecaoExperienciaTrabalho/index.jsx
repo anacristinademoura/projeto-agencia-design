@@ -21,7 +21,7 @@ const SecaoExperienciaTrabalho = (props) => {
                     titulo="Web Designer"
                     empresa="Pied Piper StartUp."
                     descricao="Criação de Landing pages, sites institucionais e E-commerces completamente personalizados e otimizados para buscadores"
-                    
+                    modoEscuro={props.modoEscuro}
                 
                 />
 
@@ -30,6 +30,7 @@ const SecaoExperienciaTrabalho = (props) => {
                     titulo="Product Designer"
                     empresa="E Corp."
                     descricao="Criação de modelos estratégicos de conversão identificando o cliente e mapeando toda a sua jornada de compra"
+                    modoEscuro={props.modoEscuro}
                 />
 
                 <Card
@@ -37,6 +38,7 @@ const SecaoExperienciaTrabalho = (props) => {
                     titulo="Digital Consulting"
                     empresa="Digital Consulting"
                     descricao="Consultoria em estratégias digitais para todas as etapas do ciclo do projeto, desde a definição inicial até a execução"
+                    modoEscuro={props.modoEscuro}
                 />
             </div>
         </section>
